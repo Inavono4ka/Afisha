@@ -22,11 +22,7 @@ public class MoviesManager {
     }
 
     public String[] findAll() {
-        String[] tmp = new String[movies.length];
-        for (int i = 0; i < tmp.length; i++) {
-            tmp[i] = movies[movies.length - 1 - i];
-        }
-        return tmp;
+        return movies;
     }
 
     public String[] findLast() {

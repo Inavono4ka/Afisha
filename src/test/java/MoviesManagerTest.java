@@ -33,5 +33,41 @@ public class MoviesManagerTest {
 
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+
+    public void testFindLast2() {
+
+        MoviesManager manager = new MoviesManager(limit = 10);
+        manager.addMovie("movie1");
+        manager.addMovie("movie2");
+        manager.addMovie("movie3");
+        manager.addMovie("movie4");
+        manager.addMovie("movie5");
+
+
+        String[] actual = manager.findLast();
+        String[] expected = {"movie5", "movie4", "movie3", "movie2", "movie1"};
+
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testFindAll() {
+        MoviesManager manager = new MoviesManager();
+        manager.addMovie("movie1");
+        manager.addMovie("movie2");
+        manager.addMovie("movie3");
+        manager.addMovie("movie4");
+        manager.addMovie("movie5");
+
+        String[] actual = manager.findAll();
+        String[] expected = {"movie1", "movie2", "movie3", "movie4", "movie5"};
+
+
+        assertArrayEquals(expected, actual);
+
+    }
 }
 
